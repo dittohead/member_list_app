@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Member list</title>
+</head>
+
+<body>
+  <h1 align="center">Welcome to the club!</h1>
+  <form action="/members" method="post">
+    <b>New member</b>
+    </br>
+    Name:
+    <input type="text" name="name">
+    <br/> Email:
+    <input type="text" name="email">
+    <br/>
+    <input type="submit" value="Add">
+    <input type="reset" value="Clear">
+  </form>
+
+  <br/>
+  <table border="1">
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Reg date</th>
+    </tr>
+    <!--remove after:-->
+
+  </table>
+  <br/>
+
+  <script>
+    nameTable = document.querySelector("table")
+
+    fetch("/members")
+      .then(response => response.json())
+      .then(memberList => {
+        memberList.forEach(member => {
+          row = document.createElement("tr")
+
+          user_num = document.createElement("td")
+          user_num.innerHTML = member.user_num
+
+          user_name = document.createElement("td")
+          user_name.innerHTML = member.user_name
+
+          email = document.createElement("td")
+          email.innerHTML = member.email
+
+          reg_date = document.createElement("td")
+          reg_date.innerHTML = member.reg_date
+
+          row.appendChild(user_num)
+          row.appendChild(user_name)
+          row.appendChild(email)
+          row.appendChild(reg_date)
+          nameTable.appendChild(row)
+        })
+      })
+  </script>
+</body>
+
+</html>
