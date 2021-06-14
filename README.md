@@ -8,7 +8,7 @@
 1. Run `go build` to create the binary (`member_list_app`)
 1. Set env variable `export PORT=":8080"`, if variable not set will be used default port 4747
 1. Run binary : `./member_list_app`
-1. Navigate in browser to http://localhost:<port>/assets/
+1. Navigate in browser to http://localhost:[port]/assets/
 * If set 8080: http://localhost:8080/assets/
 * If not set env: http://localhost:4747/assets/
 8. Have fun
