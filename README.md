@@ -6,7 +6,7 @@
 1. Navigate to cloned repo`cd .../member_list_web_app`
 1. Install depencies `go mod download`
 1. Run `go build` to create the binary (`member_list_app`)
-1. Set env variable `export PORT=":8080"` or use default port 4747
+1. Set env variable `export PORT=":8080"`, if variable not set will be used default port 4747
 1. Run binary : `./member_list_app`
 1. Navigate in browser to http://localhost:<port>/assets/
 * If set 8080: http://localhost:8080/assets/
