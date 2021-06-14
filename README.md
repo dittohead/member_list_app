@@ -3,7 +3,7 @@
 ## Build and run
 
 1. Clone repo `git clone https://github.com/dittohead/yalantis_golang_school`
-1. Navigate to cloned repo`cd .../member_list_web_app`
+1. Navigate to cloned repo`cd member_list_web_app`
 1. Install depencies `go mod download`
 1. Run `go build` to create the binary (`member_list_app`)
 1. Set env variable `export PORT=":8080"`, if variable not set will be used default port 4747
